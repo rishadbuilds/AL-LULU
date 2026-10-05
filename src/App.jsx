@@ -26,57 +26,70 @@ const HERO_IMAGES = [
   hero4,
   hero5,
 ];
+
+// Aur works images
+import work1 from './assets/works/Shop-Retail Fit-Out.jpg';
+import work2 from './assets/works/supermarket-display-racks.png';
+import work3 from './assets/works/Custom-Shelving.jpg';
+import work4 from './assets/works/office-interior-designs.webp';
+import work5 from './assets/works/Kitchen_Cabinet_Design.webp';
+import work6 from './assets/works/Curtain & Blinds Works.jpg';
+import work7 from './assets/works/Wooden Carpentry Works.webp';
+import work8 from './assets/works/Interior Decoration .avif';
+import work9 from './assets/works/Metal & Steel Fabrication.webp';
+import work10 from './assets/works/Signboard & Display Fabrication.webp';
+
 // Replace image + description for each work
 const WORKS = [
   {
     title: "Shop / Retail Fit-Out",
     description: "Complete shop interior design, counters, partitions, ceilings, flooring, etc.",
-    image: "https://picsum.photos/seed/lulu-w1/800/600",
+    image: work1,
   },
   {
     title: "Supermarket & Grocery Shop Works",
     description: "Supermarket shelving, display racks, checkout counters, promotional displays, etc.",
-    image: "https://picsum.photos/seed/lulu-w2/800/600",
+    image: work2,
   },
   {
     title: "Custom Shelving & Racks",
     description: "Wall shelves, storage racks, product display shelves, wooden/metal racks.",
-    image: "https://picsum.photos/seed/lulu-w3/800/600",
+    image: work3,
   },
   {
     title: "Office Interior Works",
     description: "Office partitions, workstations, reception desks, cabinets, meeting-room interiors.",
-    image: "https://picsum.photos/seed/lulu-w4/800/600",
+    image: work4,
   },
   {
     title: "Kitchen & Cabinet Works",
     description: "Modular kitchens, wardrobes, cupboards, storage cabinets and custom furniture.",
-    image: "https://picsum.photos/seed/lulu-w5/800/600",
+    image: work5,
   },
   {
     title: "Curtain & Blinds Works",
     description: "Curtains, roller blinds, vertical blinds, tracks and complete installation.",
-    image: "https://picsum.photos/seed/lulu-w6/800/600",
+    image: work6,
   },
   {
     title: "Wooden Carpentry Works",
     description: "Doors, wooden partitions, decorative panels, counters, furniture and custom woodwork.",
-    image: "https://picsum.photos/seed/lulu-w7/800/600",
+    image: work7,
   },
   {
     title: "Interior Decoration & False Ceiling",
     description: "False ceilings, wall panels, decorative features, lighting arrangements and interior finishing.",
-    image: "https://picsum.photos/seed/lulu-w8/800/600",
+    image: work8,
   },
   {
     title: "Metal & Steel Fabrication",
     description: "Metal frames, display stands, gates, railings, partitions, stainless-steel works and custom structures.",
-    image: "https://picsum.photos/seed/lulu-w9/800/600",
+    image: work9,
   },
   {
     title: "Signboard & Display Fabrication",
     description: "Shop signage, 3D letters, advertising boards, exhibition stands, kiosks and promotional displays.",
-    image: "https://picsum.photos/seed/lulu-w10/800/600",
+    image: work10,
   },
 ];
 
