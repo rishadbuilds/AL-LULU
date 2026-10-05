@@ -316,6 +316,8 @@ import hero2 from './assets/hero-images/al-lulu-hero2.webp';
 import hero3 from './assets/hero-images/al-lulu-hero3.webp';
 import hero4 from './assets/hero-images/al-lulu-hero-4.avif';
 import hero5 from './assets/hero-images/al-lulu-hero-5.webp';
+import hero6 from './assets/hero-images/al-lulu-hero6.webp';
+import hero7 from './assets/hero-images/al-lulu-hero7.jpg';
 
 const HERO_IMAGES = [
   hero1,
@@ -323,6 +325,8 @@ const HERO_IMAGES = [
   hero3,
   hero4,
   hero5,
+  hero6,
+  hero7,
 ];
 
 // Aur works images
