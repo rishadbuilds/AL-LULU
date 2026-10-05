@@ -10,6 +10,10 @@ const COMPANY = {
   email: "infolulucarpentry@gmail.com",
   whatsapp: "971502643065",
   whatsappMessage: "Hello AL LULU, I would like to know more about your works.",
+  // Map location (from your 2GIS link)
+  lat: 25.53973,
+  lng: 55.686016,
+  gisLink: "https://2gis.ae/dubai/firm/70000001103794060?m=55.686016%2C25.53973%2F15.8",
 };
 
 // Hero images
@@ -188,7 +192,7 @@ export default function App() {
             <div className="mt-6 h-px w-24 bg-[#d4af37]" />
             <Button href={waLink} target="_blank" rel="noreferrer" className="mt-8 gap-2">
               <WhatsAppIcon className="h-4 w-4" />
-              Chat on WhatsApp
+              Chat with Us
             </Button>
           </div>
           <Carousel images={HERO_IMAGES} />
@@ -228,20 +232,59 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-[#d4af37]/40 bg-black">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-10 text-sm md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="font-semibold text-white">
-              {COMPANY.name} <span className="text-[#d4af37]">{COMPANY.subtitle}</span>
-            </p>
-            <p className="text-neutral-500">{COMPANY.location}</p>
-          </div>
-          <div className="text-neutral-400 md:text-right">
-            <p>{COMPANY.email}</p>
-            <p>WhatsApp: +{COMPANY.whatsapp}</p>
-          </div>
-        </div>
-      </footer>
+      {/* Footer */}
+<footer className="border-t border-[#d4af37]/40 bg-black">
+  <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-2">
+    {/* Contact + directions */}
+    <div className="flex flex-col justify-center">
+      <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d4af37]">
+        Visit Us
+      </p>
+      <h2 className="mt-3 text-2xl font-bold md:text-3xl">
+        {COMPANY.name} <span className="text-[#d4af37]">{COMPANY.subtitle}</span>
+      </h2>
+      <div className="mt-3 h-px w-16 bg-[#d4af37]" />
+      <div className="mt-6 space-y-1 text-neutral-400">
+        <p>{COMPANY.location}</p>
+        <p>{COMPANY.email}</p>
+        <p>WhatsApp: +{COMPANY.whatsapp}</p>
+      </div>
+      <div className="mt-6 flex flex-wrap gap-3">
+        <Button
+          href={`https://www.google.com/maps/search/?api=1&query=${COMPANY.lat},${COMPANY.lng}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Get Directions
+        </Button>
+        <a
+          href={COMPANY.gisLink}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex h-12 items-center justify-center rounded-md border border-[#d4af37]/50 px-7 text-sm font-semibold text-[#d4af37] transition hover:bg-[#d4af37]/10"
+        >
+          Open in 2GIS
+        </a>
+      </div>
+    </div>
+
+    {/* Map */}
+    <div className="min-h-72 overflow-hidden rounded-xl border border-[#d4af37]/40 shadow-[0_0_60px_-30px_#d4af37]">
+      <iframe
+        title="AL LULU location map"
+        src={`https://maps.google.com/maps?q=${COMPANY.lat},${COMPANY.lng}&z=16&output=embed`}
+        className="h-full min-h-72 w-full border-0"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        allowFullScreen
+      />
+    </div>
+  </div>
+
+  <div className="border-t border-white/10 py-5 text-center text-xs text-neutral-500">
+    © {new Date().getFullYear()} {COMPANY.name} {COMPANY.subtitle}. All rights reserved.
+  </div>
+</footer>
 
       {/* Floating WhatsApp button */}
       <a
@@ -251,6 +294,7 @@ export default function App() {
         aria-label="Chat on WhatsApp"
         className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#d4af37] text-black shadow-[0_0_30px_-4px_#d4af37] transition hover:scale-110"
       >
+        
         <WhatsAppIcon />
       </a>
     </div>
