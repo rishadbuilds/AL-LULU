@@ -12,14 +12,20 @@ const COMPANY = {
   whatsappMessage: "Hello AL LULU, I would like to know more about your works.",
 };
 
-// Replace these with your own photos (e.g. "/images/hero1.jpg")
-const HERO_IMAGES = [
-  "https://picsum.photos/seed/lulu-hero1/1000/800",
-  "https://picsum.photos/seed/lulu-hero2/1000/800",
-  "https://picsum.photos/seed/lulu-hero3/1000/800",
-  "https://picsum.photos/seed/lulu-hero4/1000/800",
-];
+// Hero images
+import hero1 from './assets/hero-images/al-lulu-hero1.jpg';
+import hero2 from './assets/hero-images/al-lulu-hero2.webp';
+import hero3 from './assets/hero-images/al-lulu-hero3.webp';
+import hero4 from './assets/hero-images/al-lulu-hero-4.avif';
+import hero5 from './assets/hero-images/al-lulu-hero-5.webp';
 
+const HERO_IMAGES = [
+  hero1,
+  hero2,
+  hero3,
+  hero4,
+  hero5,
+];
 // Replace image + description for each work
 const WORKS = [
   {
@@ -73,6 +79,7 @@ const WORKS = [
     image: "https://picsum.photos/seed/lulu-w10/800/600",
   },
 ];
+
 /* ============================================================ */
 
 const waLink = `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(
